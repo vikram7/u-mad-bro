@@ -43,6 +43,6 @@ def u_mad_bro(phrase)
   if num_negative_words(phrase) > num_positive_words(phrase)
     return "U MAD BRO"
   else
-    return "ITS ALL GOOD"
+    return "u ain't even mad bro"
   end
 end
