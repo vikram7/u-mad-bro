@@ -39,3 +39,10 @@ def num_negative_words(phrase)
   neg_count
 end
 
+def u_mad_bro(phrase)
+  if num_negative_words(phrase) > num_positive_words(phrase)
+    return "U MAD BRO"
+  else
+    return "ITS ALL GOOD"
+  end
+end
