@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20140918232239) do
   create_table "comments", force: true do |t|
     t.integer  "user_id",    null: false
     t.text     "comment",    null: false
+    t.integer  "karma",      null: false
+    t.boolean  "mad",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

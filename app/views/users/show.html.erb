@@ -1,6 +1,10 @@
 <%= @user.username %>
 <ul>
   <% @comments.each do |comment| %>
-    <li><%= comment.comment %></li>
+    <li>
+    Comment: <%= comment.comment %><br>
+    Karma: <%= comment.karma %><br>
+    Mad: <%= comment.mad %><br>
+    </li>
   <% end %>
 </ul>

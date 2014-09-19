@@ -46,17 +46,16 @@ class Comment < ActiveRecord::Base
 
   def self.u_mad_bro(phrase)
     if num_negative_words(phrase) > num_positive_words(phrase)
-      return "U MAD BRO"
+      return true
     else
-      return "u ain't even mad bro"
+      return false
     end
   end
 
-  def self.calculate(username)
+  def self.calculate(username) #figure out how to insert user data into db
     comment_array = []
     reddit = Snooby::Client.new
     count = 1
-
     reddit.u(username).comments(20).each do |comment|
       comment_array << {:body => comment.body, :karma_count => (comment.ups - comment.downs), :sentiment => u_mad_bro(comment.body)}
      count += 1
